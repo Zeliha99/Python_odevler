@@ -1,0 +1,62 @@
+1. Desenli kelime:
+
+kelime = input("En sevdiginiz sanatcinin ismini giriniz: ")
+print("""
+                                ^^
+                            ^^      ^^
+                        ^^              ^^
+                    ^^                      ^^
+                ^^                              ^^
+            ^^                                      ^^
+        ^^                                              ^^
+    ^^                                                      ^^""", "\n", "^^", " "*20, kelime, " "*20, "\n",  " "*22, "_"*len(kelime), " "*22, "\n", """
+    ^^                                                      ^^
+        ^^                                              ^^
+            ^^                                      ^^
+                ^^                              ^^
+                    ^^                      ^^
+                        ^^              ^^
+                            ^^      ^^
+                                ^^ """)
+                    
+2. Km to Mile 
+
+km = float(input("km mesafenizi girin: "))
+mile = 0.621371192
+print(km,"km", km*mile, "mile'dir.")
+
+3. Ogrenci not hesaplama 
+
+kullanici_adi = input("Ad ve soyadinizi girin: ")
+vize = float(input("Vize notunuzu giriniz: "))
+final = float(input("Final notunuzu giriniz: "))
+ders_takip = int(input("Toplam katildiginiz ders sayisini giriniz: "))
+print("Yil sonu puaniniz", (vize*0.30)+(final*0.50)+(ders_takip*5*0.20),"'dir")
+
+4. Faiz hesaplama
+
+ana_para = float(input("Ana paranizi giriniz(€): "))
+faiz_suresi = int(input("Faiz surenizi giriniz(yil): "))
+faiz_orani = float(input("Faiz oranini giriniz: "))
+faiz_tutari = ana_para*faiz_suresi*faiz_orani/100
+print("Toplam faiz tutariniz", faiz_tutari, "€'dur",
+      "\n" "Aylik faiz tutariniz", faiz_tutari/(faiz_suresi*12), "€'dur"
+      "\n" "Gunluk faiz tutatariniz", faiz_tutari/(faiz_suresi*365), "€'dur"
+      "\n" "Toplam para miktariniz", faiz_tutari+ana_para, "€'dur")
+
+5. Aylik Masraf
+
+aylik_gelir = float(input("Aylik gelirinizi giriniz: "))
+mutfak = float(input("Aylik mutfak giderlerinizi giriniz: "))
+egitim = float(input("Aylik egitim giderlerinizi giriniz: "))
+giyim = float(input("Aylik giyim giderlerinizi giriniz: "))
+ulasim = float(input("Aylik ulasim giderlenizi giriniz: "))
+aylik_masraf = mutfak+egitim+giyim+ulasim
+print("Aylim toplam masraflariniz" ,aylik_masraf , "€'dur", "\n"
+      "Aylik masrafinizin aylik gelirinize orani" , aylik_masraf/aylik_gelir, "'dir")
+
+6. 3 farkli print sekli
+
+print("Python'un kurucusu Guido Van Rossum, Hollanda'nin Amsterdam'daki \"Universiteit Van Amsterdam\" okulundan 1982'de mezun olmustur.")
+print("""Python'un kurucusu Guido Van Rossum, Hollanda'nin Amsterdam'daki "Universiteit Van Amsterdam" okulundan 1982'de mezun olmustur.""")
+print('Python\'un kurucusu Guido Van Rossum, Hollanda\'nin Amsterdam\'daki "Universiteit Van Amsterdam" okulundan 1982\'de mezun olmustur.')
