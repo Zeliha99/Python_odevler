@@ -1,0 +1,198 @@
+BURCLAR
+
+print("""
+Bu programi kullanarak burcunuzu ogrenebilirsiniz. Tek yapmaniz gereken dogum
+tarihinizi girmek.""")
+
+d_tarihi = int(input("Ayin kacinda dogdunuz?: "))
+d_ayi = input("Hangi ayda dogdunuz?: ")
+mesaj = "{} {} tarihinde dogdugunuza gore burcunuz"
+
+if (d_ayi=="Aralik" and d_tarihi>=22) or (d_ayi=="Ocak" and d_tarihi<=21):
+    print(mesaj.format(d_tarihi, d_ayi), "oglaktir.")
+
+elif (d_ayi=="Ocak" and d_tarihi>=22) or (d_ayi=="Subat" and d_tarihi<=19):
+    print(mesaj.format(d_tarihi, d_ayi), "kovadir.")
+
+elif (d_ayi=="Subat" and d_tarihi>=20) or (d_ayi=="Mart" and d_tarihi<=20):
+    print(mesaj.format(d_tarihi, d_ayi), "baliktir.")
+
+elif (d_ayi=="Mart" and d_tarihi>=21) or (d_ayi=="Nisan" and d_tarihi<=20):
+    print(mesaj.format(d_tarihi, d_ayi), "koctur.")
+
+elif (d_ayi=="Nisan" and d_tarihi>=21) or (d_ayi=="Mayis" and d_tarihi<=21):
+    print(mesaj.format(d_tarihi, d_ayi), "bogadir.")
+
+elif (d_ayi=="Mayis" and d_tarihi>=22) or (d_ayi=="Haziran" and d_tarihi<=22):
+    print(mesaj.format(d_tarihi, d_ayi), "ikizlerdir.")
+
+elif (d_ayi=="Haziran" and d_tarihi>=23) or (d_ayi=="Temmuz" and d_tarihi<=22):
+    print(mesaj.format(d_tarihi, d_ayi), "yengectir.")
+
+elif (d_ayi=="Temmuz" and d_tarihi>=23) or (d_ayi=="Agustos" and d_tarihi<=22):
+    print(mesaj.format(d_tarihi, d_ayi), "aslandir.")
+
+elif (d_ayi=="Agustos" and d_tarihi>=23) or (d_ayi=="Eylul" and d_tarihi<=22):
+    print(mesaj.format(d_tarihi, d_ayi), "basaktir.")
+
+elif (d_ayi=="Eylul" and d_tarihi>=23) or (d_ayi=="Ekim" and d_tarihi<=22):
+    print(mesaj.format(d_tarihi, d_ayi), "terazidir.")
+
+elif (d_ayi=="Ekim" and d_tarihi>=23) or (d_ayi=="Kasim" and d_tarihi<=21):
+    print(mesaj.format(d_tarihi, d_ayi), "akreptir.")
+
+elif (d_ayi=="Kasim" and d_tarihi>=22) or (d_ayi=="Aralik" and d_tarihi<=21):
+    print(mesaj.format(d_tarihi, d_ayi), "yaydir.")
+    
+
+
+KM TO MILE 
+ #Ilk olarak kullaniciyi programla ilgili bilgilendirelim
+print("""
+Bu programi kullanarak km-mil donusumu veya mil-km donusumu yapabilirsiniz.
+
+Asagidaki seceneklerden birini seciniz:
+    a= km'den mile'a cevir
+    b= mile'dan km'ye cevir
+Cikis yapmak icin q' ya basiniz.
+""")
+
+#Bu adimla bir dongu olusturuyoruz
+
+kosul = 2
+
+while kosul == 2:
+    secim = input("Yapmak istediginiz islemi seciniz: ")
+    
+    if secim == "q":
+        print("Cikiliyor...")
+        kosul = 1
+        
+    elif secim == "a":
+        km= float(input("Mesafenizi giriniz(km): "))
+        mile= 0.621371192
+        print(km,"km", km*mile, "mile'dir.")
+
+    elif secim == "b":
+        mile= float(input("Mesafeyi giriniz(mile): "))
+        km= 1.609344
+        print(mile,"mile", mile*km, "km'dir.")
+
+SAYI TAHMIN OYUNU 
+
+print("""
+Sayi tahmin etme oyunumuza hos geldiniz. Bu oyunu oynamak icin 1 ile 10
+arasinda ir sayiyi tahmin etmeniz gerekiyor. Eger ilk denemede basarili
+olursaniz *** sahibi olacaksiniz. 3 denemede basarili olursaniz ** alicaksiniz.
+5 denemede bilirseniz sadece * sahibi olucaksiniz. Oyleyse baslayim mi?
+""")
+
+sayi = 6
+deneme = 0
+tahmin = 0
+
+while sayi != tahmin:
+    
+    tahmin = int(input("Lutfen 1 ile 10 arasinda tam bir sayi giriniz: "))
+    deneme += 1
+        
+    if tahmin != sayi:
+        print("Tahmininiz yanlis. Lutfen tekrar deneyiniz!")
+
+    elif tahmin == sayi and deneme == 1:
+        print("Tebrikler tek denemede basarili oldunuz.")
+        print("***'i hakettiniz.")    
+
+    elif tahmin == sayi and deneme <= 3:
+        print("**'iniz var.")
+
+    elif tahmin == sayi and deneme <= 5:
+        print("*'iniz var.")
+        
+
+    
+HESAP BILGILERI 
+
+
+print("""
+Sayfamiza hosgeldiniz!
+Buradan yeni bir hesap olusturabilirsiniz.
+Bunun icin tek yapmaniz gereken bir kullanici adi ve parola secmek.
+Ancak kullanici adiniz en az 3 en fazla 18 karakterli olmalidir.
+Ayrica parolanizda en az 6 en fazla 12 karakterli olmalidir.
+Hadi baslayalim!
+""")
+
+anahtar = "LOVE"
+
+while anahtar == "LOVE":
+
+    k_adi = input("Kullanici adinizi giriniz: ")
+    parola = input("Parolanizi giriniz: ")
+
+    if (len(k_adi) < 3 or len(k_adi) > 18) and (6 <= len(parola) <= 12):
+        print("Kullanici adiniz kosullari saglamiyor. Tekrar Deneyin!")
+
+    elif (6<=len(k_adi)<=18) and (len(parola)<6 or len(parola)>12):
+        print("Parolaniz kosullari saglamiyor. Tekrar Deneyin!")
+
+    elif (len(k_adi)<3 or len(k_adi)>18) and (len(parola)<6 or len(parola)>12):
+        print("Kullanici adiniz ve parolaniz kosullari saglamiyor. Tekrar Deneyin!")
+
+    elif 6<=len(k_adi)<=18 and 6<=len(parola)<=12:
+        print("Hesabiniz basariyla olusturulmustur!")
+        print("Kullanici adiniz: ", k_adi)
+        print("Parolaniz: ", parola)
+        print("Ana sayfaya yonlendiriliyorsunuz....")
+        f = open("hesap_bilgileri.txt","w+")
+        print("Kullanici adiniz: ", k_adi, file=f)
+        print("Parolaniz: " , parola, file=f)
+        f.close()
+        anahtar = "HATE"
+        
+        
+        
+ATM: Bu odevim cok guzel olmadi ama beni affedin:(
+
+print("""
+Bu uygulamayla assagidaki islemleri yapabilirsiniz:
+    a. Bakiye kontrolu
+    b. Para yatirma
+    c. Para cekme
+Tek yapmaniz gerekne yapmak istediginiz islemi secmek. Sistemi kapatmak icin
+ise q'yu secmeniz yeterlidir.
+""")
+
+toplam_bakiye = 1000
+
+anahtar = "MOVE"
+
+while anahtar == "MOVE":
+
+    yapilacak_islem = input("Lutfen yapmak istediginiz islemi seciniz: ")
+    
+    if yapilacak_islem == "a":
+        print("Toplamda", toplam_bakiye, "€ bakiyeniz bulunmakta.")
+
+    elif yapilacak_islem == "b":
+        yatirilacak_miktar = int(input("Yatirmak istediginiz miktari giriniz: "))
+        toplam_bakiye += yatirilacak_miktar
+        print(yatirilacak_miktar, "€ hesabiniza basariyla yatirildi.")
+        print("Yeni bakiyeniz:", toplam_bakiye)
+
+#yetersiz bakiye oldugunu nasil tespit edecegimi bulamadim:(
+        
+    elif yapilacak_islem == "c":
+        cekilecek_miktar = int(input("Cekmek istediginiz miktari giriniz: "))
+        toplam_bakiye -= cekilecek_miktar
+        print("Hesabinizdan", cekilecek_miktar, "€ cekilmistir.")
+        print("Kalan bakiyeniz:", toplam_bakiye)
+        
+    elif yapilacak_islem == "q":
+        print("Sistem kapatiliyor...")
+        anahtar = "STOP"
+
+    else:
+        print("Lutfen yapilacak bir islem seciniz!")
+        
+        
