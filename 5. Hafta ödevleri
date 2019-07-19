@@ -1,0 +1,125 @@
+#ADAM ASMACA
+
+sekiller = ["""
+     
+     ------
+     |    |
+     |    o
+     |
+     |
+     --- ""","""
+
+    ------
+    |    |
+    |    o
+    |    |
+    |
+    --- ""","""
+
+    ------
+    |    |
+    |    o
+    |    |\
+    |
+    --- ""","""
+
+    ------
+    |    |
+    |    o
+    |   /|\
+    |
+    --- ""","""
+
+    ------
+    |    |
+    |    o
+    |   /|\ 
+    |   /
+    --- ""","""
+
+    ------
+    |    |
+    |    o
+    |   /|\
+    |   / \
+    --- """]
+
+nasil_oynanir = """ Adam asmaca oyunumuza hosgeldiniz!
+                    1- Harf tahmini
+                    2- Cikis"""
+
+deneme_sayisi = 0
+kelime = "bilgisayar"
+
+harfler = ["_" for i in range(len(kelime))]
+print(harfler)
+
+while deneme_sayisi<6:
+    print(nasil_oynanir)
+    secim = input("Lutfen yapmak istediginiz adimi seciniz: ")
+
+    if secim == "2":
+        break
+    
+    if secim == "1":
+        harf = input("Harf giriniz: ")
+        if harf.isalpha != False:
+            
+            if harf not in kelime:
+                print("{} deneme hakkiniz kaldi!".format(6-deneme_sayisi))
+                print(sekiller[deneme_sayisi])
+                deneme_sayisi += 1
+
+            else:
+                p = 0
+                for i in kelime or i.upper() in kelime:
+                    if i == harf or i.upper() == harf:
+                        harfler.pop(p)
+                        harfler.insert(p,harf)
+                        p += 1
+
+                    else:
+                        p += 1
+
+                if harfler == list(kelime):
+                    print("{} denemede kelimeyi bildiniz!".format(deneme_sayisi))
+                    quit()
+                print(harfler)
+                
+        else:
+             print("Yanlizca harf girebilirsiniz!")
+             continue
+else:
+    print("Basarisiz olsunuz!")   
+    
+    
+ #sayi tahmini oyunu
+oyun_bilgisi = """ SAYI TAHMINI OYUNUNA HOSGELDINIZ!
+                   Lutfen rakamlari birbirinden ve 0'dan farkli 4 basamakli bir
+                   sayi giriniz! Cikmak icin q'ya basabilirsiniz."""
+print(oyun_bilgisi)
+
+sayim = "8492"
+sayim = list(sayim)
+k=0
+
+while True:
+    sayi_degeri_yeri = 0
+    sayi_degeri = 0
+    k+=1
+    tahmin = list(input("{}. tahmininizi giriniz: ".format(k)))
+
+    for i in tahmin:
+        if i in sayim and tahmin.index(i) == sayim.index(i):
+            sayi_degeri_yeri += 1
+        elif i in sayim:
+            sayi_degeri += 1
+        
+
+    if sayim == tahmin:
+        print("Tahmininiz dogru. Tebrikler")
+        break
+print("+{} , -{}".format(sayi_degeri_yeri, dayi_degeri))
+
+
+                        
